@@ -1,8 +1,6 @@
 import java.util.Scanner;
 public class ScannerExercise {
-    public static void main(String[] args) {
-        maxOfNumbers();
-        System.exit(0); // das beendet das Programm an dieser Stelle.
+    public static void withoutLoop(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] d = new int[1000];
         System.out.print("Geben Sie Ihre erste Zahl ein: ");
@@ -58,5 +56,8 @@ public class ScannerExercise {
             }
         }
         System.out.println("Das Maximum deiner Zahlen ist "+maxNumber);
+    }
+    public static void main(String[]args) {
+        maxOfNumbers();
     }
 }
