@@ -1,3 +1,6 @@
+/*
+Zum Editieren muss ich scheinbar einen Fork machen - Mistgabeln kenne ich, bin auf dem Land aufgewachsen :P
+*/
 import java.util.Scanner;
 public class ScannerExercise {
     public static void withoutLoop(String[] args) {
