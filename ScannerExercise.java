@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class ScannerExercise {
-    public static void withoutLoop(String[] args) {
-        Scanner sc = new Scanner(System.in);;
+    public static void ScannerExercise(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int[] d = new int[1000];
         System.out.print("Geben Sie Ihre erste Zahl ein: ");
         int zahl1 = sc.nextInt(); // Integer lesen
