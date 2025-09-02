@@ -1,41 +1,27 @@
 import java.util.Random;
 
-// Please implement the function findMax().
-class MaxFunction {
-    public static void main(String[] args) {
-        int[] unorderedArray= getRandomArray(20);
-        int maxNumber= findMax(unorderedArray);
-        System.out.println("The maximum of the follworing numbers:");
-        for (int i=0;i<unorderedArray.length;i++) {
-            System.out.print(unorderedArray[i]);
-            if (i<unorderedArray.length-1) {
-                System.out.print(", ");
-            } else {
-                System.out.println("");
+public class MaxFunction {
+    public static int findMax(int[] zahlenArray) {
+        int maxNumber = zahlenArray[0];
+        for (int i = 1; i < zahlenArray.length; i++) {
+            if (maxNumber < zahlenArray[i]) {
+                maxNumber = zahlenArray[i];
             }
         }
-        System.out.println("is: "+maxNumber);
+        return maxNumber;
     }
-    /**
-     * This function shall find the maximum value in an array of
-     * integers. 
-     * @array: any array of integers, of any length.
-     * @return: The maxiumum value in the input array.
-     */
-    public static int findMax(int[] array) {
-        // .... implement finding the maxium of the array and return it
-        return(-1);
+    public static void main(String[] args) {
+        Random random = new Random();
+        int laenge = random.nextInt(6) + 5;
+        int[] zahlenArray = new int[laenge];
 
-    }
-
-    public static int[] getRandomArray(int maxlength) {
-        Random randgen= new Random(System.currentTimeMillis());
-        int len= randgen.nextInt(maxlength);
-        int maxheight= 50* maxlength;
-        int[] randomArray= new int[len];
-        for (int i=0;i<len;i++) {
-            randomArray[i]= randgen.nextInt(maxheight);
+        for (int i = 0; i < laenge; i++) {
+            zahlenArray[i] = random.nextInt(41) + 10;
+            System.out.print(zahlenArray[i] + " ");
         }
-        return(randomArray);
+        System.out.println(" ");
+
+        int maxNumber = findMax(zahlenArray);
+        System.out.println("Die größte Zahl ist: " + maxNumber);
     }
 }
